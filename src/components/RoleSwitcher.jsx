@@ -9,11 +9,17 @@ export default function RoleSwitcher() {
   const [sliderStyle, setSliderStyle] = useState({});
 
   useEffect(() => {
-    const activeRef = role === 'viewer' ? viewerRef : adminRef;
-    if (activeRef.current) {
-      const { offsetLeft, offsetWidth } = activeRef.current;
-      setSliderStyle({ left: offsetLeft, width: offsetWidth });
-    }
+    const updateSlider = () => {
+      const activeRef = role === 'viewer' ? viewerRef : adminRef;
+      if (activeRef.current) {
+        const { offsetLeft, offsetWidth } = activeRef.current;
+        setSliderStyle({ left: offsetLeft, width: offsetWidth });
+      }
+    };
+
+    updateSlider();
+    window.addEventListener('resize', updateSlider);
+    return () => window.removeEventListener('resize', updateSlider);
   }, [role]);
 
   return (
