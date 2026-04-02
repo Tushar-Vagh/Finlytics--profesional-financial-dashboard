@@ -92,7 +92,9 @@ export default function TransactionTable({ onEdit }) {
         <span className="tx-category-badge">{tx.category}</span>
       </td>
       <td>
-        <span className={`tx-type-badge ${tx.type}`}>{tx.type}</span>
+        <span className={`tx-type-badge ${tx.type}`}>
+          <span>{tx.type}</span>
+        </span>
       </td>
       {role === 'admin' && (
         <td>

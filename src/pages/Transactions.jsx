@@ -70,20 +70,20 @@ export default function Transactions() {
         <div className="page-header-actions">
           <button className="btn btn-secondary btn-sm" onClick={resetFilters}>
             <RotateCcw size={14} />
-            Reset
+            <span>Reset</span>
           </button>
           <button className="btn btn-secondary btn-sm" onClick={handleExportCSV}>
             <Download size={14} />
-            CSV
+            <span>CSV</span>
           </button>
           <button className="btn btn-secondary btn-sm" onClick={handleExportJSON}>
             <FileJson size={14} />
-            JSON
+            <span>JSON</span>
           </button>
           {role === 'admin' && (
             <button className="btn btn-primary btn-sm" onClick={handleAdd}>
               <Plus size={14} />
-              Add Transaction
+              <span>Add Transaction</span>
             </button>
           )}
         </div>

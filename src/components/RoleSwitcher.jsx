@@ -25,7 +25,7 @@ export default function RoleSwitcher() {
         onClick={() => setRole('viewer')}
       >
         <Eye size={14} />
-        Viewer
+        <span>Viewer</span>
       </button>
       <button
         ref={adminRef}
@@ -33,7 +33,7 @@ export default function RoleSwitcher() {
         onClick={() => setRole('admin')}
       >
         <Shield size={14} />
-        Admin
+        <span>Admin</span>
       </button>
     </div>
   );
