@@ -80,7 +80,7 @@
   --balance-gradient: linear-gradient(135deg, #60a5fa, #8b5cf6);
 
   --navbar-bg: rgba(10, 14, 26, 0.85);
-  --sidebar-bg: rgba(15, 23, 42, 0.8);
+  --sidebar-bg: #0f172a;
   --input-bg: rgba(30, 41, 59, 0.5);
   --input-border: rgba(255, 255, 255, 0.1);
   --input-focus: rgba(20, 184, 166, 0.3);
